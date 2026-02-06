@@ -10,3 +10,4 @@ catboost
 optuna
 matplotlib
 seaborn
+scikit-learn
