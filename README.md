@@ -1,113 +1,195 @@
 # 📊 Telecom Customer Churn Prediction using Machine Learning
 
-## 🔍 Project Overview
-Customer churn is a critical problem in the telecom industry, where retaining existing customers is more cost-effective than acquiring new ones.  
-This project focuses on **predicting customer churn** using machine learning techniques based on customer behavior and service usage data.
+An end-to-end Machine Learning project that predicts customer churn in the telecom industry using EDA, feature engineering, multiple ML models, and Streamlit deployment.
 
-The goal is to help telecom companies **identify customers likely to churn** and take proactive retention actions.
+---
+
+## 🧠 Project Overview
+
+Customer churn is one of the biggest challenges in the telecom industry. Retaining existing customers is more cost-effective than acquiring new ones.
+
+This project focuses on:
+- Understanding customer behavior through Exploratory Data Analysis (EDA)
+- Building machine learning classification models
+- Predicting whether a customer is likely to churn
+- Deploying the trained model using Streamlit
+
+The goal is to help telecom companies take proactive actions to reduce customer churn.
 
 ---
 
 ## 🎯 Objectives
-- Perform **Exploratory Data Analysis (EDA)** to understand customer behavior
-- Identify key factors influencing customer churn
-- Build and evaluate **machine learning classification models**
-- Provide **business insights** based on model results
+
+- Analyze telecom customer data
+- Identify churn-driving factors
+- Build accurate ML models
+- Compare multiple algorithms
+- Provide real-time churn prediction using a web app
 
 ---
 
-## 🗂️ Dataset
-- **Source:** Telecom Customer Churn Dataset
-- **Target Variable:** `Churn`
-- **Type:** Binary Classification (Yes / No)
+## 📂 Dataset Description
 
-### Key Features:
+The dataset contains customer-level information including:
 - Customer demographics
-- Account information
-- Service usage details
-- Contract and billing information
+- Services subscribed (Internet, Phone, etc.)
+- Contract type
+- Billing and payment details
+- Monthly and total charges
+- Target variable: Churn (Yes / No)
 
 ---
 
-## 🧪 Project Workflow
-1. **Data Loading & Understanding**
-2. **Exploratory Data Analysis (EDA)**
-   - Univariate & multivariate analysis
-   - Churn distribution
-   - Feature relationships
-3. **Data Preprocessing**
-   - Handling missing values
-   - Encoding categorical variables
-   - Feature scaling
-4. **Model Building**
-   - Logistic Regression
-   - Decision Tree
-   - Random Forest
-5. **Model Evaluation**
-   - Accuracy
-   - Confusion Matrix
-   - Classification Report
-6. **Insights & Conclusion**
+## 🔍 Exploratory Data Analysis (EDA)
+
+EDA was performed to:
+- Understand data distribution
+- Detect missing values
+- Analyze correlations
+- Identify churn patterns
+
+Key Insights:
+- Customers with month-to-month contracts have higher churn
+- Higher monthly charges increase churn probability
+- Long-term contracts reduce churn risk
+
+Visualizations were created using Matplotlib and Seaborn.
 
 ---
 
-## 🛠️ Technologies Used
-- **Programming Language:** Python  
-- **Libraries:**
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-- **Tools:**
-  - Jupyter Notebook
-  - VS Code
-  - Git & GitHub
+## ⚙️ Data Preprocessing & Feature Engineering
+
+Steps performed:
+- Handling missing values
+- Encoding categorical features
+- Scaling numerical features
+- Train-test split
+- Feature transformation for model compatibility
 
 ---
 
-## 📁 Project Structure
+## 🤖 Machine Learning Models Used
+
+The following models were trained and evaluated:
+
+- Logistic Regression (Baseline model)
+- Decision Tree Classifier
+- Random Forest Classifier
+- AdaBoost Classifier
+- XGBoost Classifier
+- Optuna Tuned Model (Hyperparameter optimization)
+
+---
+
+## 📈 Model Evaluation
+
+Models were evaluated using:
+- Accuracy Score
+- Confusion Matrix
+- Precision, Recall, and F1-score
+
+Ensemble and boosted models performed better in capturing complex churn patterns.
+
+---
+
+## 🖥 Streamlit Application
+
+A Streamlit web application is included that:
+- Accepts customer input details
+- Loads the trained model
+- Predicts churn in real time
+- Displays results in a user-friendly format
+
+---
+
+## 🛠 Tech Stack
+
+Programming Language:
+- Python
+
+Libraries & Tools:
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- xgboost
+- optuna
+- streamlit
+
+Development Tools:
+- Jupyter Notebook
+- VS Code
+
+---
+
+## 📁 Project File Structure
+
 Telecom_Customer_Churn_Prediction_using_Machine_Learning/
-│
-
-├── Churn_Analysis_EDA.ipynb
-
-├── Customer-Churn.csv
-
-├── README.md
-
-├── .gitignore
-
-└── .venv/ (ignored)
-
+|
+|-- Churn_Analysis_EDA.ipynb
+|   |-- Exploratory data analysis and visualization
+|
+|-- ML_Model_Building.ipynb
+|   |-- Model training, evaluation, and selection
+|
+|-- Customer-Churn.csv
+|   |-- Telecom customer dataset
+|
+|-- streamlit_app.py
+|   |-- Streamlit web application for churn prediction
+|
+|-- best_xgboost_churn_model.pkl
+|   |-- Trained XGBoost model
+|
+|-- best_optuna_churn_model.pkl
+|   |-- Hyperparameter optimized model
+|
+|-- ada_boost_churn_model.pkl
+|   |-- AdaBoost trained model
+|
+|-- requirements.txt
+|   |-- Project dependencies
+|
+|-- README.md
+|   |-- Project documentation
 
 ---
 
-## 📈 Results & Insights
-- Customers with **month-to-month contracts** show higher churn rates
-- **Higher monthly charges** are strongly associated with churn
-- Long-term contracts significantly reduce churn probability
-- Tree-based models performed better in capturing non-linear patterns
+## 🚀 How to Run the Project
+
+1. Clone the repository  
+   git clone https://github.com/Musharraf-Bubere/Telecom_Customer_Churn_Prediction_using_Machine_Learning.git
+
+2. Navigate to the project folder  
+   cd Telecom_Customer_Churn_Prediction_using_Machine_Learning
+
+3. Install dependencies  
+   pip install -r requirements.txt
+
+4. Run the Streamlit app  
+   streamlit run streamlit_app.py
 
 ---
 
-## 🚀 Future Improvements
-- Hyperparameter tuning for better performance
-- Try advanced models like **XGBoost / LightGBM**
-- Handle class imbalance using **SMOTE**
-- Deploy model using **Flask or FastAPI**
+## 🔮 Future Enhancements
+
+- Handle class imbalance using SMOTE
+- Add Power BI or Plotly dashboards
+- Deploy using Flask or FastAPI
+- Integrate database storage
+- Improve UI/UX of Streamlit app
 
 ---
 
 ## 👤 Author
-**Musharraf Bubere**  
+
+Musharraf Bubere  
 Aspiring Data Analyst | Machine Learning Enthusiast  
 
-🔗 GitHub: https://github.com/Musharraf-Bubere  
-🔗 LinkedIn: *(Add your LinkedIn profile link here)*
+GitHub: https://github.com/Musharraf-Bubere  
+LinkedIn: https://www.linkedin.com/in/musharraf-bubere007/
 
 ---
 
-## ⭐ If you like this project
-Give it a ⭐ on GitHub — it motivates me to build more!
-
+⭐ If you found this project useful, don’t forget to give it a star on GitHub!
