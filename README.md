@@ -125,34 +125,27 @@ Development Tools:
 
 ## 📁 Project File Structure
 
+```
 Telecom_Customer_Churn_Prediction_using_Machine_Learning/
-|
-|-- Churn_Analysis_EDA.ipynb
-|   |-- Exploratory data analysis and visualization
-|
-|-- ML_Model_Building.ipynb
-|   |-- Model training, evaluation, and selection
-|
-|-- Customer-Churn.csv
-|   |-- Telecom customer dataset
-|
-|-- streamlit_app.py
-|   |-- Streamlit web application for churn prediction
-|
-|-- best_xgboost_churn_model.pkl
-|   |-- Trained XGBoost model
-|
-|-- best_optuna_churn_model.pkl
-|   |-- Hyperparameter optimized model
-|
-|-- ada_boost_churn_model.pkl
-|   |-- AdaBoost trained model
-|
-|-- requirements.txt
-|   |-- Project dependencies
-|
-|-- README.md
-|   |-- Project documentation
+├── Churn_Analysis_EDA.ipynb
+│ └── Exploratory data analysis and visualization
+├── ML_Model_Building.ipynb
+│ └── Model training, evaluation, and model selection
+├── Customer-Churn.csv
+│ └── Telecom customer dataset
+├── streamlit_app.py
+│ └── Streamlit web application for churn prediction
+├── best_xgboost_churn_model.pkl
+│ └── Trained XGBoost model
+├── best_optuna_churn_model.pkl
+│ └── Hyperparameter optimized model (Optuna)
+├── ada_boost_churn_model.pkl
+│ └── AdaBoost trained model
+├── requirements.txt
+│ └── Project dependencies
+└── README.md
+└── Project documentation
+```
 
 ---
 
@@ -193,3 +186,4 @@ LinkedIn: https://www.linkedin.com/in/musharraf-bubere007/
 ---
 
 ⭐ If you found this project useful, don’t forget to give it a star on GitHub!
+
